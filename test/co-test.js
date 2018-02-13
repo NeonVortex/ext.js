@@ -1,7 +1,7 @@
-const co = require("../co/co");
-const fs = require("../fs-async/fs-async");
+const co = require(__dirname + "/../co/co");
+const fs = require(__dirname + "/../fs-async/fs-async");
 
 co(function*(){
-    let fileText = yield fs.readFileAsync('test/co-test.js');
+    let fileText = yield fs.readFileAsync(__dirname + '/co-test.js');
     console.log(fileText.toString("utf-8"));
 });
