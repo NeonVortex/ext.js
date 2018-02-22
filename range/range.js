@@ -1,8 +1,7 @@
-function Range(start, end, step = 1){
+const Range = function (start, end, step = 1){
     return (this instanceof Range) ?
         Object.assign(this, {start: start, end: end, step: step}) :
         new Range (start, end , step) ;
-
 }
 
 Range.prototype[Symbol.iterator] = function () {
@@ -32,6 +31,6 @@ Range.prototype.map = function (func) {
 
 module.exports = Range;
 
-//Range(1,4).forEach(i=>console.log(i));
-//console.log(new Range(1,11,3).map(i=>i*2));
-//console.log([...Range(1,5)]);
+// Range(1,4).forEach(i=>console.log(i));
+// console.log(new Range(1,11,3).map(i=>i*2));
+// console.log([...Range(1,5)]);
