@@ -1,4 +1,4 @@
-# js.ex
+# js-ex
 
 Some missing features in JS.
 
