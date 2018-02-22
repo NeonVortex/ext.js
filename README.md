@@ -2,7 +2,7 @@
 
 Some missing features in JS.
 
-``co`` \tBasic coroutine with Promise\
+``co`` \t Basic coroutine with Promise\
 ``range`` Range support
 
 Target Runtime Environment: node
