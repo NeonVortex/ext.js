@@ -5,8 +5,6 @@ function Range(start, end, step = 1){
 
 }
 
-Range.prototype = Object.create(Array.prototype);
-
 Range.prototype[Symbol.iterator] = function () {
     let [rangeObj, curr] = [this, this.start];
     return {
@@ -23,17 +21,17 @@ Range.prototype[Symbol.iterator] = function () {
     }
 }
 
-// Range.prototype.forEach = function (func) {
-//     return [...this].forEach(func);
-// }
+Range.prototype.forEach = function (func) {
+    return Array.from(this).forEach(func);
+}
 
-// Range.prototype.map = function (func) {
-//     return [...this].map(func);
-// }
+Range.prototype.map = function (func) {
+    return Array.from(this).map(func);
+}
 
 
 module.exports = Range;
 
-Range(1,4).forEach(i=>console.log(i));
-console.log(new Range(1,11,3).map(i=>i*2));
-console.log([...Range(1,5)]);
+//Range(1,4).forEach(i=>console.log(i));
+//console.log(new Range(1,11,3).map(i=>i*2));
+//console.log([...Range(1,5)]);
