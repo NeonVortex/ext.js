@@ -20,12 +20,12 @@ Range.prototype[Symbol.iterator] = function () {
     }
 }
 
-Range.prototype.forEach = function (func) {
-    return Array.from(this).forEach(func);
+Range.prototype.forEach = function (callback, thisArg) {
+    return Array.from(this).forEach(callback, thisArg);
 }
 
-Range.prototype.map = function (func) {
-    return Array.from(this).map(func);
+Range.prototype.map = function (callback, thisArg) {
+    return Array.from(this).map(callback, thisArg);
 }
 
 
